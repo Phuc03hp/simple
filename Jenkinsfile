@@ -47,7 +47,7 @@ pipeline {
         stage('Docker Run') {
             steps {
                 script {
-                    sh "docker run -d -p 8888:5173 --rm --name mywordpress ${registry}/${imageName}:${env.BUILD_NUMBER}" // Chạy container từ image mới nhất
+                    sh "docker run -d -p 5173:5173 --rm --name mywordpress ${registry}/${imageName}:${env.BUILD_NUMBER}" // Chạy container từ image mới nhất
                 }
             }
         }
